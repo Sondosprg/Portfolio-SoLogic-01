@@ -24,7 +24,7 @@ let commandObj = {
     contact: ' github : <https://github.com/Sondosprg> | instagram : <https://www.instagram.com/so.logic03/> linkedin : <https://www.linkedin.com/in/sondos-cher-688255292/> ',
     projects: ['project 1' , "project 2"],
     language: ['AR', 'EN'],
-    help: 'Available commands: soLogic - fullName - age -  services -  skills - about - experience - university - speciality - email - phonenumber - projects -  contact - language - help - clear - mode - date ',
+    help: 'Available commands: soLogic - fullName - age -  services -  skills - about - experience - speciality - email - phonenumber - projects -  contact - language - help - clear - mode - date ',
     clear: '',
     mode: ['dark', 'space', 'snow'],
     date: currentDate.toLocaleString(),

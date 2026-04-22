@@ -31,10 +31,14 @@ function setBgHeader(){
 
 
 
-
+const header  = document.getElementById('header');
 // toggle of header bg
 function toggleHeaderBg( bgColor){
-document.getElementById('header').style.background =  bgColor;
+    if (header){
+        header.style.background =  bgColor;
+    }else{
+        console.log(`${header} is not existe ...`);
+    }
 
 };
 
@@ -50,3 +54,19 @@ function removeFadeInClass(){
 };
 
 
+
+// toggle menu
+const menu = document.querySelector('#menu');
+const MainLists = document.querySelector('.MainLists');
+
+let menuVisible = false;
+menu.addEventListener("click" , ()=>{
+    if (menuVisible== false){
+        MainLists.classList.add("menu");
+         MainLists.style.display = "block";
+         menuVisible = true;
+    }else{
+        MainLists.style.display = "none";
+        menuVisible = false;
+    }
+});

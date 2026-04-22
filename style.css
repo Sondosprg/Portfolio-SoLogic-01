@@ -90,6 +90,19 @@ header .logo a {
   color: var(--secondary-clr);
 }
 
+.menu{
+  z-index: 2;
+  position:absolute;
+  top: 6rem;
+  right: 2rem;
+
+  width: 10rem;
+  height: 20rem;
+  background-color: var(--main-clr);
+  border-radius: var(--border-rad-card);
+}
+
+
 header .MainLists li {
   float: left;
   margin-left: 2.5rem;
@@ -123,13 +136,20 @@ header .profile {
   justify-content: center;
 }
 
+
 header .profile img {
+  display:none;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
   box-shadow: var(--box-shadow-profile);
   transition: var(--transition-btn);
 }
+
+.hideMenu{
+  display:none;
+}
+
 
 header .profile img:hover {
   box-shadow: var(--box-shadow-profile-hover);
@@ -239,7 +259,7 @@ header .profileContent .setting button:hover {
 
 .home .HomeText h2 {
   transition: var(--transition-btn);
-  z-index: 1;
+  z-index: 0;
   color: var(--text-clr);
   font-size: var(--font-size-p);
   font-weight: var(--font-weight-title);
@@ -269,7 +289,7 @@ header .profileContent .setting button:hover {
 
 .home .HomeText .addText::after {
   content: "";
-  z-index: 1;
+  /* z-index: 1; */
   position: relative;
   width: auto;
   height: 3rem;
@@ -337,7 +357,7 @@ header .profileContent .setting button:hover {
 }
 
 .home .HomeText .btns button {
-  z-index: 1;
+  z-index: 0;
   border-radius: var(--border-rad-btn);
   width: var(--btn-width);
   height: var(--btn-height);
@@ -485,8 +505,8 @@ header .profileContent .setting button:hover {
 
 .skills .cards .card {
   cursor: pointer;
-  min-width: 20vw;
-  min-height: 20vw;
+  min-width: 10vw;
+  min-height: 10vw;
   background-color: var(--main-clr);
   border-radius: var(--border-rad-card);
   display: flex;
@@ -680,8 +700,8 @@ header .profileContent .setting button:hover {
 }
 
 .contact form {
-  padding: 1rem;
-  margin: 1rem;
+  /* padding: 1rem;
+  margin: 1rem; */
   width: 100%;
   display: grid;
   justify-content: center;
@@ -706,7 +726,8 @@ header .profileContent .setting button:hover {
 
   background: #000;
   border-radius: var(--border-rad-btn);
-  width: 90%;
+  /* width: 90%; */
+  width: 30vw;
   height: 2rem;
   box-shadow: var(--box-shadow);
   transition: var(--transition-btn);
@@ -724,7 +745,8 @@ header .profileContent .setting button:hover {
   background: #000;
   box-shadow: var(--box-shadow);
   transition: var(--transition-btn);
-  width: 90%;
+  /* width: 90%; */
+  width: 30vw;
   height: 10rem;
   border-radius: var(--border-rad-btn);
   font-weight: var(--font-weight-p);
@@ -778,7 +800,7 @@ header .profileContent .setting button:hover {
 }
 
 footer {
-  height: 40vh;
+  height:40vh;
   /* background-image:radial-gradient(circle 200px at bottom,silver 10%,#000000ef 50%);*/
   background-image: var(--bg-clr);
   display: grid;
@@ -888,7 +910,10 @@ font-size: var(--font-size-h2);
 
 } */
 
-@media (max-width: 824px) {
+
+
+
+@media (max-width:900px) {
   .home {
     justify-content: space-around;
   }
@@ -926,6 +951,36 @@ font-size: var(--font-size-h2);
 
   }
 
+
+  
+  .contact form input ,.contact form textarea{
+    width: 55vw;
+  }
+
+  .skills .cards .card{
+      min-width: 25vw;
+      min-height: 25vw;
+  }
+
+
+  .MainLists{
+    display: none;
+  }
+
+  .hideMenu{
+    display:block;
+  }
+
+
+  header .MainLists li{
+    margin-top: 1rem;
+  }
+  header .MainLists li a{
+    color:var(--attrack-clr);
+  }
+
+
+
 }
 
 @media (max-width: 433px) {
@@ -936,6 +991,12 @@ font-size: var(--font-size-h2);
     width: 50vw;
     height: 50vw;
   }
+
+  .skills .cards .card{
+      min-width: 35vw;
+      min-height: 35vw;
+  }
+
 }
 
 /* animation  */
@@ -990,7 +1051,7 @@ font-size: var(--font-size-h2);
   padding: 1.6rem;
   background-color: #000;
   /* margin: 5rem; */
-  height: 80vh;
+  height: 30vh;
   overflow: auto;
 }
 .cmd .copyright {
