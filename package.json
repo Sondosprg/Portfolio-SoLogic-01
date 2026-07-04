@@ -1,0 +1,25 @@
+{
+  "name": "portfolio-so-logic-01",
+  "version": "1.0.0",
+  "description": "A simple Portfolio with (html5, css3, vanilla javascript)",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "lint": "echo 'No linter configured for vanilla HTML project'",
+    "test": "echo 'No tests configured'"
+  },
+  "keywords": [
+    "portfolio",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Cherifi Soundous",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  },
+  "devDependencies": {
+    "serve": "^14.2.3"
+  }
+}
